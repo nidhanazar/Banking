@@ -1,0 +1,271 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<form action="form" method="post">
+    {% csrf_token %}
+    <h2 style="color: #0b2e13; margin-left: 250px" >FORM</h2>
+  <div class="form-group row">
+    <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="inputName3" name="name" placeholder="Name" required>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="inputDOB3" class="col-sm-2 col-form-label">DOB</label>
+    <div class="col-sm-2">
+      <input type="date" class="form-control" id="inputDOB3" name="dob" placeholder="Date Of Birth" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputAge3" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" id="inputAge3" name="age" placeholder="Age" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPhone3" class="col-sm-2 col-form-label">Phone Number</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" id="inputPhone3" name="phone" placeholder="Phone" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-2">
+      <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email" required>
+    </div>
+  </div>
+<div class="form-group row">
+    <label for="inputAddress3" class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-2">
+      <input type="address" class="form-control" id="inputAddress3" name="address" placeholder="Address" required>
+    </div>
+  </div>
+
+
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="col-sm-2">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Male" checked required>
+          <label class="form-check-label" for="gridRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Female" required>
+          <label class="form-check-label" for="gridRadios2">
+            Female
+          </label>
+        </div>
+      </div>
+      </div>
+
+  </fieldset>
+
+        <div class="form-group row">
+            <label for="inputDistrict" class="col-sm-2 col-form-label">District</label>
+            <div class="col-sm-2">
+                <select class="form-control" name="district" id="inputDistrict" required>
+                        <option value="SelectDistrict">Select District</option>
+                        <option value="Alappuzha">Alappuzha</option>
+                        <option value="Ernakulam">Ernakulam</option>
+                        <option value="Kozhikode">Kozhikode</option>
+                        <option value="Palakkad">Palakkad</option>
+                        <option value="Kollam">Kollam</option>
+                        <option value="Kannur">Kannur</option>
+                        <option value="Kasargod">Kasargod</option>
+                        <option value="Idukki">Idukki</option>
+                        <option value="Kottayam">Kottayam</option>
+                        <option value="Thrissur">Thrissur</option>
+                        <option value="Pathanamthitta">Pathanamthitta</option>
+                        <option value="Malappuram">Malappuram</option>
+                        <option value="Wayanad">Wayanad</option>
+                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                      </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputBranch" class="col-sm-2 col-form-label">Branch</label>
+            <div class="col-sm-2">
+                <select class="form-control" name="branch" id="inputBranch" required>
+                    <option value="">-- select one -- </option>
+                </select>
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        var Alappuzha = ["Cherthala","Ambalappuzha","Kuttanadu","Karthikapally","Chengannur","Mavellikara"];
+        var Ernakulam = ["Paravur","Aluva","Kochi","Kanayannoor","Muvattupuzha","Kunnathunadu","Kothamangalam"];
+        var Kozhikode = ["Balusseri","Chelannur","Koduvally","Kozhikode","Kunnamangalam","Kunnummal","Melady","Panthalayani","Perambra","Thodannur","Thuneri","Vadakara"];
+        var Palakkad = ["Palakkad city","Ottapalam","Shornur","Chittur-Tattamangalam","Pattambi","Cherpulassery","Mannarkkad"];
+        var Kollam = ["Kollam","Kottarakara","Pathanapuram","Karungapally","Kunnathur","Punalur",];
+        var Kannur = ["Kannur","Thaliparamba","Payyanur","Iritty","Thalassery"];
+        var Kasargod = ["kasargod","Kanhangad","Neeleswaram"];
+        var Idukki = ["Peermade","Udumbanchola","Idukki","Thoduphuzha","Devikulam"];
+        var Kottayam = ["Changanassery","Kottayam","Vaikom","Meenachil","Kanjirappally"];
+        var Thrissur = ["Chalakudy","Mukudapuram","Kodungallur","Thrissur","Chavakad","Kunnamkulam","Thalapilly"];
+        var pathanamthitta = ["Adoor","Konni","Kozhencherry","Ranni","Mallapally","Thiruvalla"];
+        var Malappuram = ["Perinthalmanna","Nilambur","Eranad","Kondotty","Ponnani","Tirur","Tirurangadi"];
+        var Wayanad = ["Vythiri","Sulthan Bathery","Mananthavady"];
+        var Thiruvananthapuram = ["Neyyattinkara","Kattakada","Nedumangadu","Thiruvananthapuram","Chirayinkeezhu","Varkala"];
+
+
+        $("#inputDistrict").change(function(){
+            var DistrictSelected = $(this).val();
+            var optionsList;
+            var htmlString = "";
+
+        switch (DistrictSelected) {
+            case "Alappuzha":
+                optionsList = Alappuzha;
+                break;
+            case "Ernakulam":
+                optionsList = Ernakulam;
+                break;
+            case "Kozhikode":
+                optionsList = Kozhikode;
+                break;
+            case "Palakkad":
+                optionsList = Palakkad;
+                break;
+            case "Kollam":
+                optionsList = Kollam;
+                break;
+            case "Kannur":
+                optionsList = Kannur;
+                break;
+            case  "Kasargod":
+                optionsList = Kasargod;
+                break;
+            case "Idukki":
+                optionsList = Idukki;
+                break;
+            case "Kottayam":
+                optionsList = Kottayam;
+                break;
+            case "Thrissur":
+                optionsList = Thrissur;
+                break;
+            case "pathanamthitta":
+                optionsList = pathanamthitta;
+                break;
+            case  "Malappuram":
+                optionsList = Malappuram;
+                break;
+            case "Wayanad":
+                optionsList = Wayanad;
+                break;
+            case  "Thiruvananthapuram":
+                optionsList = Thiruvananthapuram;
+                break;
+}
+
+
+    for(var i = 0; i < optionsList.length; i++){
+         htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+    }
+    $("#inputBranch").html(htmlString);
+
+});
+        </script>
+
+
+
+    <div class="form-group row">
+            <label for="inputAccountType" class="col-sm-2 col-form-label">Account Type</label>
+             <div class="col-sm-2">
+                <select class="form-control" name="account_type" id="inputAccountType" required>
+                    <option value="SelectDistrict">Select Account Type</option>
+                    <option value="SelectDistrict">Savings Account</option>
+                    <option value="SelectDistrict">Current Account</option>
+                </select>
+             </div>
+    </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2">Materials provide</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" aria-required="true">
+        <label class="form-check-label" for="gridCheck1">
+          Debit card
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck2" aria-required="true">
+        <label class="form-check-label" for="gridCheck2">
+          Credit card
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck3" aria-required="true">
+        <label class="form-check-label" for="gridCheck3">
+          cheque book
+        </label>
+      </div>
+    </div>
+  </div>
+
+{#<script>#}
+{#  document.getElementById("myForm").addEventListener("submit", function(event) {#}
+{#    var checkboxes = document.querySelectorAll('input[type="checkbox"]:required');#}
+{#    var checked = false;#}
+{#    for (var i = 0; i < checkboxes.length; i++) {#}
+{#      if (checkboxes[i].checked) {#}
+{#        checked = true;#}
+{#        break;#}
+{#      }#}
+{#    }#}
+{#    if (!checked) {#}
+{#      event.preventDefault();#}
+{#      checkboxes[0].setCustomValidity("Please check at least one box to proceed.");#}
+{#    }#}
+{#  });#}
+{#</script>#}
+
+<div class="form-group row">
+  <div class="col-sm-10">
+    <button type="submit" class="btn btn-primary" style="margin-left: 250px; margin-bottom: 20px">Submit</button>
+  </div>
+</div>
+
+<script>
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.tags == 'success' %}
+        alert("{{ message }}\nClick OK to go to the home page.");
+        window.location.href = "/";
+      {% elif message.tags == 'error' %}
+        alert("{{ message }}");
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</script>
+
+
+
+    <div class="form-group row">
+    <div class="col-sm-10">
+           <a href="logout">
+            <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" style="margin-left: 240px">Logout</button>
+           </a>
+    </div>
+  </div>
+</form>
+{##}
+{#{% if messages %}#}
+{#  <ul class="messages">#}
+{#    {% for message in messages %}#}
+{#      <li>{{ message }}</li>#}
+{#    {% endfor %}#}
+{#  </ul>#}
+{#{% endif %}#}
